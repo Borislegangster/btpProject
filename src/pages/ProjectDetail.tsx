@@ -39,8 +39,127 @@ const projectDetails = {
       title: "Livraison",
       completed: false
     }]
+  }, 
+  "residential-complex-1": {
+    title: "Complexe Résidentiel Les Jardins",
+    status: "ongoing",
+    progress: 70,
+    location: "Yaoundé, Ngoa-Ekellé",
+    startDate: "2022-11-01",
+    endDate: "2023-12-15",
+    description: "Un ensemble résidentiel haut de gamme de 200 appartements, avec espaces verts, piscine, salle de sport et gardiennage 24/7.",
+    mainImage: "/assets/ex4.jfif",
+    gallery: ["/assets/img1.jfif", "/assets/img2.jfif", "/assets/ex3.jfif"],
+    specifications: {
+      surface: "18,000 m²",
+      budget: "30M €",
+      duration: "13 mois",
+      team: "90 personnes"
+    },
+    milestones: [
+      { date: "2022-11-01", title: "Début des travaux", completed: true },
+      { date: "2023-02-15", title: "Fondations terminées", completed: true },
+      { date: "2023-06-20", title: "Structure et toiture", completed: true },
+      { date: "2023-09-30", title: "Aménagement paysager", completed: false },
+      { date: "2023-12-15", title: "Livraison finale", completed: false }
+    ]
+  },
+  "residential-complex-2": {
+    title: "Complexe Résidentiel Les Jardins",
+    status: "completed",
+    progress: 100,
+    location: "Douala, Bonanjo",
+    startDate: "2021-05-10",
+    endDate: "2022-10-25",
+    description: "Résidence sécurisée de 200 appartements avec jardins communautaires, aire de jeux pour enfants et parking privé.",
+    mainImage: "/assets/ap1.jfif",
+    gallery: ["/assets/img1.jfif", "/assets/img2.jfif", "/assets/ex3.jfif"],
+    specifications: {
+      surface: "20,000 m²",
+      budget: "35M €",
+      duration: "17 mois",
+      team: "110 personnes"
+    },
+    milestones: [
+      { date: "2021-05-10", title: "Début des travaux", completed: true },
+      { date: "2021-10-30", title: "Structure béton", completed: true },
+      { date: "2022-04-15", title: "Clôture et sécurité", completed: true },
+      { date: "2022-08-01", title: "Livraison partielle", completed: true },
+      { date: "2022-10-25", title: "Réception finale", completed: true }
+    ]
+  },
+  "medical-center": {
+    title: "Centre Médical Avancé",
+    status: "completed",
+    progress: 100,
+    location: "Yaoundé, Bastos",
+    startDate: "2020-09-05",
+    endDate: "2021-12-10",
+    description: "Centre de santé moderne avec 5 blocs opératoires, laboratoire d'analyses, et services d'urgences 24h/24.",
+    mainImage: "/assets/ex1.jpg",
+    gallery: ["/assets/img1.jfif", "/assets/img2.jfif", "/assets/ex3.jfif"],
+    specifications: {
+      surface: "12,000 m²",
+      budget: "28M €",
+      duration: "15 mois",
+      team: "75 personnes"
+    },
+    milestones: [
+      { date: "2020-09-05", title: "Début des travaux", completed: true },
+      { date: "2021-01-20", title: "Installation électrique", completed: true },
+      { date: "2021-06-15", title: "Équipements médicaux", completed: true },
+      { date: "2021-10-01", title: "Tests de conformité", completed: true },
+      { date: "2021-12-10", title: "Inauguration", completed: true }
+    ]
+  },
+  "industrial-plant": {
+    title: "Usine Industrielle Moderne",
+    status: "completed",
+    progress: 100,
+    location: "Kribi, Zone Industrielle",
+    startDate: "2019-07-01",
+    endDate: "2020-11-20",
+    description: "Usine de production automatisée spécialisée dans la fabrication de matériaux de construction, avec une capacité de 50 tonnes/jour.",
+    mainImage: "/assets/ap1.jfif",
+    gallery: ["/assets/img1.jfif", "/assets/img2.jfif", "/assets/ex3.jfif"],
+    specifications: {
+      surface: "10,000 m²",
+      budget: "22M €",
+      duration: "16 mois",
+      team: "60 personnes"
+    },
+    milestones: [
+      { date: "2019-07-01", title: "Début des travaux", completed: true },
+      { date: "2019-12-10", title: "Charpente métallique", completed: true },
+      { date: "2020-04-25", title: "Installation machines", completed: true },
+      { date: "2020-09-15", title: "Mise en service", completed: true },
+      { date: "2020-11-20", title: "Production lancée", completed: true }
+    ]
+  },
+  "shopping-mall": {
+    title: "Galerie Marchande",
+    status: "completed",
+    progress: 100,
+    location: "Douala, Bonapriso",
+    startDate: "2022-01-10",
+    endDate: "2023-04-05",
+    description: "Centre commercial premium avec 100 boutiques, cinéma 4D, restaurants et parking de 800 places.",
+    mainImage: "/assets/s1.jpeg",
+    gallery: ["/assets/img1.jfif", "/assets/img2.jfif", "/assets/ex3.jfif"],
+    specifications: {
+      surface: "30,000 m²",
+      budget: "50M €",
+      duration: "15 mois",
+      team: "150 personnes"
+    },
+    milestones: [
+      { date: "2022-01-10", title: "Début des travaux", completed: true },
+      { date: "2022-06-25", title: "Structure achevée", completed: true },
+      { date: "2022-11-30", title: "Façade vitrée", completed: true },
+      { date: "2023-02-15", title: "Ouverture partielle", completed: true },
+      { date: "2023-04-05", title: "Inauguration", completed: true }
+    ]
   }
-  // Add more projects as needed
 };
 export function ProjectDetail() {
   const {
@@ -50,7 +169,8 @@ export function ProjectDetail() {
   if (!project) {
     return <div>Projet non trouvé</div>;
   }
-  return <div className="min-h-screen bg-gray-50">
+  return (
+    <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
       <div className="bg-[#0a1e37] text-white py-20">
         <div className="container mx-auto px-4">
@@ -166,5 +286,6 @@ export function ProjectDetail() {
           </div>
         </div>
       </div>
-    </div>;
+    </div>
+  );
 }

@@ -4,10 +4,11 @@ export function ServicesSection() {
 
   const navigate = useNavigate();
 
-  return <section className="py-16 bg-white">
+  return (
+    <section className="py-16 bg-white">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold text-center mb-12 text-[#0a1e37]">
-          Nous fournissons des services
+          Nos prèstations de services
         </h2>
         <div className="flex flex-col md:flex-row mb-12">
           <div className="w-full md:w-1/3 mb-6 md:mb-0">
@@ -48,11 +49,7 @@ export function ServicesSection() {
             </button>
           </div>
         </div>
-        <div className="text-center mt-8">
-          <a href="#" className="text-[#3498db] hover:underline">
-            Nos Réalisations
-          </a>
-        </div>
       </div>
-    </section>;
+    </section>
+  );
 }

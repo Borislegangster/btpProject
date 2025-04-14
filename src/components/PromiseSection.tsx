@@ -4,7 +4,8 @@ import { YoutubeModal } from "./YoutubeModal";
 export function PromiseSection() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const youtubeChannelUrl = "https://youtube.com/@ameConstruction";
-  return <section className="py-16 bg-[#0a1e37] text-white">
+  return (
+    <section className="py-20 bg-[#0a1e37] text-white">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row items-center">
           <div className="w-full md:w-1/2 mb-8 md:mb-0">
@@ -36,5 +37,6 @@ export function PromiseSection() {
       </div>
       <YoutubeModal videoId="YOUR_VIDEO_ID" // Replace with your actual YouTube video ID
     isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
-    </section>;
+    </section>
+  );
 }

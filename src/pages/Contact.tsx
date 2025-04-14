@@ -19,7 +19,8 @@ export function Contact() {
       [e.target.name]: e.target.value
     });
   };
-  return <div className="min-h-screen bg-gray-50">
+  return (
+    <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
       <div className="bg-[#0a1e37] text-white py-20">
         <div className="container mx-auto px-4">
@@ -129,5 +130,6 @@ export function Contact() {
           </div>
         </div>
       </div>
-    </div>;
+    </div>
+  );
 }

@@ -1,9 +1,12 @@
 import { Link } from "react-router-dom";
 import { MapPinIcon, PhoneIcon, MailIcon, FacebookIcon, TwitterIcon, YoutubeIcon, LinkedinIcon, PhoneCallIcon } from "lucide-react";
 export function Footer() {
-  return <footer className="bg-[#0a1e37] text-white pt-16">
+  return (
+    /* Section Footer */
+    <footer className="bg-[#0a1e37] text-white pt-16">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+          {/* Contact */}
           <div>
             <h4 className="text-xl font-semibold mb-4">Contact</h4>
             <div className="flex items-start mb-3">
@@ -19,6 +22,7 @@ export function Footer() {
               <p>tatouboris78@gmail.com</p>
             </div>
           </div>
+          {/* Service */}
           <div>
             <h4 className="text-xl font-semibold mb-4">Services</h4>
             <ul className="space-y-2">
@@ -44,6 +48,7 @@ export function Footer() {
               </li>
             </ul>
           </div>
+          {/* Pages */}
           <div>
             <h4 className="text-xl font-semibold mb-4">Pages</h4>
             <ul className="space-y-2">
@@ -74,6 +79,7 @@ export function Footer() {
               </li>
             </ul>
           </div>
+          {/* Reseaux Sociaux */}
           <div>
             <h4 className="text-xl font-semibold mb-4">Réseaux Sociaux</h4>
             <div className="flex space-x-4">
@@ -96,6 +102,7 @@ export function Footer() {
           </div>
         </div>
       </div>
+      {/* Down du footer */}
       <div className="border-t border-gray-700 py-6">
         <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center text-sm">
           <p>© {new Date().getFullYear()} AME Construction. Tous droits réservés.</p>
@@ -118,5 +125,6 @@ export function Footer() {
           </div>
         </div>
       </div>
-    </footer>;
+    </footer>
+  );
 }

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { ChevronDownIcon, ChevronUpIcon } from "lucide-react";
 export function FaqSection() {
+  /* Declaration de l'etat */
   const [openIndex, setOpenIndex] = useState<number | null>(null);
   const toggleFaq = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);
@@ -30,7 +31,9 @@ export function FaqSection() {
     question: "Lorem ipsum dolor sit amet?",
     answer: "Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
   }];
-  return <section className="py-16 bg-white">
+  return (
+    /* Section FAQ */
+    <section className="py-16 bg-white">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold text-center mb-12 text-[#0a1e37]">
           Vous pouvez demander
@@ -47,5 +50,6 @@ export function FaqSection() {
             </div>)}
         </div>
       </div>
-    </section>;
+    </section>
+  );
 }

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { ChevronLeftIcon, ChevronRightIcon } from "lucide-react";
+/* Donnees de slides */
 const slides = [{
   image: "/assets/hero1.jpg",
   title: "Nous Construisons Votre Maison",
@@ -29,7 +30,9 @@ export function HeroSection() {
   const prevSlide = () => {
     setCurrentSlide(prev => (prev - 1 + slides.length) % slides.length);
   };
-  return <section className="relative h-[500px] overflow-hidden">
+  return (
+    /* Section Hero (Slide) */
+    <section className="relative h-[500px] overflow-hidden">
       {slides.map((slide, index) => <div key={index} className={`absolute inset-0 transition-opacity duration-1000 ${index === currentSlide ? "opacity-100" : "opacity-0"}`}>
           <div className="absolute inset-0 bg-cover bg-center" style={{
         backgroundImage: `linear-gradient(rgba(10, 30, 55, 0.5), rgba(10, 30, 55, 0.5)), url('${slide.image}')`
@@ -52,5 +55,6 @@ export function HeroSection() {
           <ChevronRightIcon size={24} />
         </button>
       </div>
-    </section>;
+    </section>
+  );
 }

@@ -20,7 +20,8 @@ export function Help() {
     topics: ["Maintenance", "Réparations", "Garanties", "Interventions d'urgence"]
   }];
   const quickLinks = ["Comment démarrer un projet ?", "Obtenir un devis", "Suivi de projet", "Garanties et assurances", "Paiements et facturation", "Réclamations"];
-  return <div className="min-h-screen bg-gray-50">
+  return (
+    <div className="min-h-screen bg-gray-50">
       <div className="bg-[#0a1e37] text-white py-20">
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-center mb-6">
@@ -93,5 +94,6 @@ export function Help() {
           </div>
         </div>
       </div>
-    </div>;
+    </div>
+  );
 }

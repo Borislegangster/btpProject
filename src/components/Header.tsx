@@ -2,9 +2,10 @@ import { useEffect, useState } from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import { PhoneIcon, MailIcon, GlobeIcon, MenuIcon, XIcon } from "lucide-react";
 export function Header() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const navigate = useNavigate();
-  const location = useLocation();
+  /* Declaration de l'etat */
+  const [isMenuOpen, setIsMenuOpen] = useState(false);// Initialisation
+  const navigate = useNavigate(); // Navigation dynamique
+  const location = useLocation(); // 
   useEffect(() => {
     setIsMenuOpen(false);
   }, [location]);
@@ -21,11 +22,14 @@ export function Header() {
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
-  return <header className="w-full bg-[#0a1e37] relative z-50">
+  return (
+    /* Section Header */
+    <header className="w-full bg-[#0a1e37] relative z-50">
+      {/* Topbar */}
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between py-2 text-white text-sm">
           <div className="hidden sm:flex items-center space-x-6">
-            <Link to={"https://wa.me/237695674827"} target="_blanc">
+          <Link to={"https://wa.me/237695674827"} target="_blanc">
               <div className="flex items-center space-x-2">
                 <PhoneIcon size={16} />
                 <span className="hover:text-[#3498db]">+237 695 674 827</span>
@@ -38,24 +42,34 @@ export function Header() {
               </div>
             </Link>
           </div>
-          <div className="flex items-center space-x-4 ml-auto">
-          <Link to={"#"}>
-            <div className="flex items-center space-x-1">
-              <GlobeIcon size={16} />
-              <span className="hover:text-[#3498db]">Français</span>
-            </div>
-          </Link>
+          <div className="flex items-center space-x-4">
+            <Link to="/login" className="text-white hover:text-[#3498db] transition">
+              Se connecter
+            </Link>
+            <Link to="/register" className="text-white hover:text-[#3498db] transition">
+              S'inscrire
+            </Link>
+          </div>
+          <div className="flex items-center space-x-4">
+            <Link to={"#"}>
+              <div className="flex items-center space-x-1">
+                <GlobeIcon size={16} />
+                <span className="hover:text-[#3498db]">Anglais</span>
+              </div>
+            </Link>
           </div>
         </div>
       </div>
+      {/* Navbar */}
       <nav className="relative bg-[#0a1e37] border-t border-gray-700">
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between py-4">
             <Link to="/" className="flex items-center relative z-20">
               <div className="text-white font-bold text-2xl flex items-center">
-                <img src="/assets/logo.png" alt="" className="w-[175px]"/>
+                <img src="/assets/logo7.png" alt="" className="w-[190px]"/>
               </div>
             </Link>
+            {/* Responsive */}
             <button className="md:hidden text-white relative z-40" onClick={toggleMenu} aria-label="Toggle menu">
               {isMenuOpen ? <XIcon size={32} className="hover:text-[#3498db]" /> : <MenuIcon size={32} className="hover:text-[#3498db]" />}
             </button>
@@ -105,5 +119,6 @@ export function Header() {
           </div>
         </div>
       </nav>
-    </header>;
+    </header>
+  );
 }

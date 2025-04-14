@@ -1,6 +1,8 @@
 import { UserIcon, AwardIcon, PhoneIcon } from "lucide-react";
 export function FeaturesSection() {
-  return <section className="bg-[#3498db] text-white py-12">
+  return (
+    /* Section de fidelisation */
+    <section className="bg-[#3498db] text-white py-12">
       <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
         <div className="flex p-6 hover:bg-blue-600 transition">
           <div className="mr-4">
@@ -56,5 +58,6 @@ export function FeaturesSection() {
           </div>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 }

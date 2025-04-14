@@ -2,9 +2,11 @@ import { useNavigate } from "react-router-dom";
 
 export function ExperienceSection() {
 
-  const navigate = useNavigate();
+  const navigate = useNavigate(); // Navigation dynamique
 
-  return <section className="py-16 bg-gray-100">
+  return (
+    /* Section Experience */
+    <section className="py-16 bg-gray-100">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row">
           <div className="w-full md:w-1/2 grid grid-cols-2 gap-4 mb-8 md:mb-0">
@@ -46,5 +48,6 @@ export function ExperienceSection() {
           </div>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 }

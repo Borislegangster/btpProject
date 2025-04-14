@@ -16,8 +16,13 @@ import { Privacy } from "./pages/Privacy";
 import { Cookies } from "./pages/Cookies";
 import { Help } from "./pages/Help";
 import { FAQ } from "./pages/FAQ";
+import { Login } from './pages/auth/Login';
+import { Register } from './pages/auth/Register';
+import { ForgotPassword } from './pages/auth/ForgotPassword';
+import { PasswordReset } from './pages/auth/PasswordReset';
 export function App() {
-  return <Router>
+  return (
+    <Router>
       <div className="flex flex-col w-full min-h-full">
         <Header />
         <main>
@@ -36,9 +41,14 @@ export function App() {
             <Route path="/cookies" element={<Cookies />} />
             <Route path="/help" element={<Help />} />
             <Route path="/faq" element={<FAQ />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/register" element={<Register />} />
+            <Route path="/forgot-password" element={<ForgotPassword />} />
+            <Route path="/reset-password" element={<PasswordReset />} />
           </Routes>
         </main>
         <Footer />
       </div>
-    </Router>;
+    </Router>
+  );
 }

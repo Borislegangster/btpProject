@@ -1,6 +1,7 @@
 import { HomeIcon, UsersIcon, CheckCircleIcon, BuildingIcon } from "lucide-react";
 export function StatsSection() {
-  return <section className="py-12 bg-white">
+  return (
+    <section className="py-12 bg-white">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
           <div className="flex flex-col items-center">
@@ -25,5 +26,6 @@ export function StatsSection() {
           </div>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 }

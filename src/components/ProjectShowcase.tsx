@@ -4,8 +4,12 @@ export function ProjectShowcase() {
 
   const navigate = useNavigate();
 
-  return <section className="py-12 bg-gray-100">
+  return (
+    <section className="py-20 bg-gray-100">
       <div className="container mx-auto px-4">
+        <h2 className="text-3xl font-bold text-center mb-12 text-[#0a1e37]">
+          Nos réalisations
+        </h2>
         <div className="flex flex-col md:flex-row">
           <div className="w-full md:w-2/3 mb-8 md:mb-0">
             <img src="/assets/ex1.jpg" alt="Commercial center construction" className="w-full h-full object-cover" />
@@ -42,5 +46,6 @@ export function ProjectShowcase() {
           </button>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 }

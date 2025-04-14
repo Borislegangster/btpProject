@@ -41,7 +41,8 @@ export function BlogPost() {
   if (!post) {
     return <div>Article non trouvé</div>;
   }
-  return <div className="min-h-screen bg-gray-50">
+  return (
+    <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
       <div className="bg-[#0a1e37] text-white py-20">
         <div className="container mx-auto px-4">
@@ -136,5 +137,6 @@ export function BlogPost() {
           </div>
         </div>
       </div>
-    </div>;
+    </div>
+  );
 }

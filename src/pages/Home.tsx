@@ -10,7 +10,9 @@ import { FaqSection } from "../components/FaqSection";
 import { TestimonialSection } from "../components/TestimonialSection";
 import { NewsletterSection } from "../components/NewsletterSection";
 export function Home() {
-  return <>
+  return ( 
+    /* Page d'acceuil */
+    <div>
       <HeroSection />
       <FeaturesSection />
       <ExperienceSection />
@@ -21,5 +23,6 @@ export function Home() {
       <FaqSection />
       <TestimonialSection />
       <NewsletterSection />
-    </>;
+    </div>
+  );
 }

@@ -17,7 +17,8 @@ export function Privacy() {
     content: "Vous disposez de plusieurs droits concernant vos données personnelles :",
     items: ["Droit d'accès à vos données", "Droit de rectification", "Droit à l'effacement", "Droit à la portabilité des données"]
   }];
-  return <div className="min-h-screen bg-gray-50">
+  return (
+    <div className="min-h-screen bg-gray-50">
       <div className="bg-[#0a1e37] text-white py-20">
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-center mb-6">
@@ -90,5 +91,6 @@ export function Privacy() {
           </div>
         </div>
       </div>
-    </div>;
+    </div>
+  );
 }
